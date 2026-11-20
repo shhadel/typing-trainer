@@ -1,0 +1,25 @@
+.ui-button {
+  border: 1px solid #245c9f;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+.ui-button:hover { background: #dce8f5; }
+.ui-button--primary { background: #356db5; color: #fff; }
+.ui-button--primary:hover { background: #285b9b; }
+.ui-button--secondary { background: #e7eef7; color: #244d7c; border-color: #a9bfd8; }
+.ui-button--ghost { background: #fff; color: #333; border-color: #aaa; }
+.ui-card { background: #fff; border: 1px solid #ccc; border-radius: 4px; padding: 20px; }
+.ui-stat-card { display: flex; flex-direction: column; gap: 7px; min-height: 108px; }
+.ui-stat-card__label, .ui-stat-card__note { color: #666; font-size: .84rem; }
+.ui-stat-card__value { font-size: 1.8rem; letter-spacing: -.03em; }
+.ui-page-title { display: flex; justify-content: space-between; align-items: end; gap: 22px; margin: 4px 0 27px; }
+.ui-page-title h1 { font-size: clamp(2rem, 4.5vw, 3.1rem); line-height: 1.08; margin: 7px 0 10px; letter-spacing: -.04em; }
+.ui-page-title p { color: #555; margin: 0; max-width: 620px; line-height: 1.5; }
+.ui-eyebrow { color: #356db5; text-transform: uppercase; letter-spacing: .08em; font-size: .7rem; font-weight: 700; }
+.ui-empty-state { text-align: center; padding: 38px 20px; color: #666; }
+.ui-empty-state__mark { font-size: 1.8rem; color: #356db5; }
+.ui-empty-state h3 { color: #222; margin-bottom: 5px; }

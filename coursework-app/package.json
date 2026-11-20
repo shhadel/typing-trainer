@@ -1,0 +1,21 @@
+{
+  "name": "coursework-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "lint": "eslint src vite.config.ts",
+    "lint:fix": "eslint src vite.config.ts --fix",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@typing-trainer/ui": "file:../ui",
+    "react": "19.3",
+    "react-dom": "19.3",
+    "react-router-dom": "^7.18.6"
+  }
+}

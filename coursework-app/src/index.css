@@ -1,0 +1,133 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #f2f2f2;
+  font-synthesis: none;
+  text-rendering: auto;
+  font-weight: 400;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, textarea { font: inherit; }
+a { color: inherit; text-decoration: none; }
+.app-frame { min-height: 100vh; }
+.sidebar {
+  min-height: 62px;
+  padding: 10px max(20px, calc((100vw - 1080px) / 2));
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.nav-links { display: flex; align-items: center; gap: 6px; }
+.nav-link { padding: 9px 12px; color: #444; border-radius: 3px; font-size: .92rem; }
+.nav-link:hover { background: #eee; }
+.nav-link--active { background: #e7eef7; color: #245c9f; font-weight: 700; }
+.legend-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #5b9b65; margin-right: 5px; }
+.main-area { max-width: 1080px; min-height: calc(100vh - 62px); margin: 0 auto; padding: 36px 24px 30px; }
+.stats-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 24px; }
+.home-lower { display: grid; grid-template-columns: 1.15fr .85fr; gap: 14px; }
+.welcome-card { min-height: 220px; padding: 25px; }
+.welcome-copy { max-width: 460px; }
+.welcome-copy h2, .card-heading h2, .race-card h2, .result-banner h2 { font-size: 1.35rem; margin: 8px 0; }
+.welcome-copy p { color: #555; line-height: 1.55; font-size: .95rem; margin: 0 0 18px; }
+.text-list-card { padding: 20px; }
+.card-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.card-heading h2 { font-size: 1.15rem; margin: 5px 0 0; }
+.text-link { color: #245c9f; font-size: .86rem; font-weight: 700; white-space: nowrap; }
+.mini-text-row { display: flex; align-items: center; gap: 12px; padding: 13px 0; border-top: 1px solid #ddd; }
+.mini-text-icon { width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid #bbb; color: #356db5; font-weight: 700; }
+.mini-text-row strong, .mini-text-row small { display: block; }
+.mini-text-row strong { font-size: .9rem; }
+.mini-text-row small { margin-top: 4px; color: #666; font-size: .78rem; }
+.row-arrow { margin-left: auto; color: #555; }
+.training-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 14px 0; }
+.training-metrics .ui-stat-card { min-height: 96px; }
+.race-card { padding: 20px; }
+.race-card-heading { display: flex; align-items: center; justify-content: space-between; }
+.race-card h2 { margin: 5px 0 0; }
+.race-tag { border: 1px solid #ccc; color: #555; padding: 6px 9px; font-size: .8rem; }
+.race-track { position: relative; margin: 18px 0 10px; padding-right: 7px; }
+.track-lane { height: 50px; position: relative; display: flex; align-items: center; padding-left: 72px; }
+.track-lane--ghost { height: 42px; }
+.lane-label { position: absolute; left: 0; width: 60px; color: #666; font-size: .65rem; }
+.lane-line { height: 1px; width: 100%; background: repeating-linear-gradient(90deg, #bbb 0 12px, transparent 12px 21px); }
+.track-lane--ghost .lane-line { opacity: .6; }
+.race-car { position: absolute; top: 5px; font-size: 1.6rem; transition: left .25s ease; z-index: 1; }
+.race-car--ghost { top: 3px; filter: grayscale(1); opacity: .55; font-size: 1.4rem; }
+.finish-flag { position: absolute; right: 0; top: 5px; color: #555; font-size: 1.1rem; }
+.track-legend { display: flex; gap: 18px; margin-left: 72px; color: #666; font-size: .65rem; }
+.legend-dot { width: 7px; height: 7px; margin: 0 5px 0 0; }
+.legend-dot--ghost { background: #999; }
+.typing-card { margin-top: 14px; }
+.practice-panel { padding: 3px; }
+.practice-label { display: flex; justify-content: space-between; color: #666; font-size: .72rem; }
+.target-text { font-size: clamp(1.1rem, 2vw, 1.4rem); line-height: 1.8; color: #888; margin: 16px 0; }
+.char--correct { color: #286e39; }
+.char--wrong { background: #f5b5b5; color: #7b1111; }
+.typing-input { width: 100%; resize: vertical; border: 1px solid #aaa; border-radius: 3px; background: white; color: #222; min-height: 82px; padding: 12px; outline: none; line-height: 1.5; }
+.typing-input:focus { border-color: #356db5; box-shadow: 0 0 0 2px #356db522; }
+.typing-input::placeholder { color: #888; }
+.training-hint { color: #666; font-size: .8rem; margin: 12px 3px; }
+.result-banner { margin-top: 14px; display: flex; align-items: center; gap: 14px; border-color: #a8c5aa; background: #f2f8f2; }
+.result-banner > div { flex: 1; }
+.result-banner p { color: #555; margin: 5px 0 0; font-size: .9rem; }
+.result-confetti { font-size: 1.5rem; color: #4f8757; }
+.history-card { margin-top: 16px; padding: 20px; }
+.history-table { width: 100%; overflow: auto; }
+.history-row { min-width: 640px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 12px; align-items: center; padding: 12px 6px; border-top: 1px solid #ddd; font-size: .85rem; }
+.history-row--head { color: #666; font-size: .68rem; font-weight: 700; }
+.history-row small { color: #666; }
+.category-chips { display: flex; gap: 8px; flex-wrap: wrap; margin: -8px 0 18px; }
+.category-chip { border: 1px solid #bbb; padding: 7px 11px; color: #444; font-size: .82rem; }
+.category-chip--active { background: #e7eef7; color: #245c9f; border-color: #8daed4; font-weight: 700; }
+.category-chip b { margin-left: 6px; }
+.text-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.text-card { padding: 12px; }
+.text-card-art { height: 112px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; font-size: 2.5rem; background: #eef3f8; color: #356db5; }
+.text-card-art--2 { background: #eff4ee; color: #507b53; }
+.text-card-art--3 { background: #f4f1e9; color: #88723b; }
+.text-card-art small { position: absolute; right: 9px; bottom: 6px; font-size: .65rem; color: #666; }
+.text-card-meta { display: flex; justify-content: space-between; color: #666; font-size: .75rem; margin: 13px 3px 7px; }
+.text-card h2 { font-size: 1.08rem; margin: 0 3px 7px; }
+.text-card p { color: #555; font-size: .84rem; line-height: 1.5; margin: 0 3px; min-height: 48px; }
+.text-card-link { display: flex; justify-content: space-between; margin: 14px 3px 2px; color: #245c9f; font-size: .83rem; font-weight: 700; }
+.full-text-card { max-width: 850px; padding: 26px; }
+.full-text-card p { font-size: clamp(1.15rem, 2.5vw, 1.6rem); line-height: 1.7; color: #333; margin: 20px 0 26px; }
+.not-found-page { text-align: center; padding: 7vh 0; }
+.not-found-number { font-size: clamp(5rem, 17vw, 10rem); font-weight: 700; color: #356db5; opacity: .2; line-height: .8; }
+.not-found-page .ui-page-title { justify-content: center; margin-top: 10px; }
+.not-found-page .ui-page-title > div { max-width: 600px; }
+
+@media (max-width: 900px) {
+  .sidebar { padding-left: 20px; padding-right: 20px; }
+  .main-area { padding: 30px 20px; }
+  .home-lower { grid-template-columns: 1fr; }
+  .text-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .sidebar { flex-wrap: wrap; gap: 8px 14px; padding: 10px 14px; }
+  .nav-links { width: 100%; overflow-x: auto; gap: 2px; }
+  .nav-link { white-space: nowrap; padding: 8px 9px; font-size: .82rem; }
+  .main-area { padding: 25px 14px; }
+  .ui-page-title { align-items: flex-start; flex-direction: column; margin: 4px 0 24px; }
+  .ui-page-title h1 { font-size: 2.2rem; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .stats-grid .ui-stat-card:last-child:nth-child(odd) { grid-column: span 2; }
+  .training-metrics { gap: 7px; }
+  .training-metrics .ui-stat-card { padding: 12px 9px; }
+  .training-metrics .ui-stat-card__value { font-size: 1.2rem; }
+  .training-metrics .ui-stat-card__label { font-size: .72rem; }
+  .race-card { padding: 16px 13px; }
+  .track-legend { margin-left: 58px; font-size: .53rem; gap: 9px; }
+  .lane-label { width: 51px; font-size: .55rem; }
+  .track-lane { padding-left: 58px; }
+  .result-banner { align-items: flex-start; flex-wrap: wrap; padding: 16px; }
+  .result-banner a { margin-left: 30px; }
+  .text-grid { grid-template-columns: 1fr; }
+  .text-card-art { height: 100px; }
+  .history-card { padding: 16px 12px; }
+  .full-text-card { padding: 20px; }
+}
